@@ -1,6 +1,6 @@
 from minecraft import minecraft, block
 
-mc = minecraft.Minecraft.create("service1.kingfisher.co")
+mc = minecraft.Minecraft.create("[YOUR RASPBERRY JUICE SERVER HERE]")
 
 mc.setBlocks(0,0,0,9,9,9,1)
 
