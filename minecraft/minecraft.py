@@ -131,7 +131,8 @@ class Minecraft:
     """
     def getBlocks(self, *args):
         """Get a cuboid of blocks (x0,y0,z0,x1,y1,z1) => [id:int]"""
-        return int(self.conn.sendReceive("world.getBlocks", intFloor(args)))
+        s = self.conn.sendReceive("world.getBlocks", intFloor(args))
+        return map(int, s.split(","))
 
     def setBlock(self, *args):
         """Set block (x,y,z,id,[data])"""
